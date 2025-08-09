@@ -1,0 +1,6 @@
+session_id,user_id,session_start_time,pageviews,country
+1,A123,2025-08-01 08:00:00,5,USA
+2,B456,2025-08-01 09:00:00,2,Canada
+3,A123,2025-08-01 10:00:00,7,USA
+4,C789,2025-08-01 11:00:00,3,UK
+5,B456,2025-08-01 12:00:00,4,Canada
