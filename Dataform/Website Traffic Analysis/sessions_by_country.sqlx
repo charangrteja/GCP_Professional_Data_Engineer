@@ -1,0 +1,16 @@
+config {
+  type: "table",
+  name: "sessions_by_country",
+  description: "Aggregated session data by country."
+}
+
+SELECT
+  country,
+  COUNT(DISTINCT session_id) AS total_sessions,
+  AVG(pageviews) AS average_pageviews_per_session
+FROM
+  ${ref("stg_ga_sessions")}
+GROUP BY
+  country
+ORDER BY
+  total_sessions DESC
