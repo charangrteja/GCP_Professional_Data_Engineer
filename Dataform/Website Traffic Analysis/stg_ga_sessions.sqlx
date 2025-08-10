@@ -1,0 +1,14 @@
+config {
+  type: "table",
+  name: "stg_ga_sessions",
+  description: "Staged Google Analytics session data."
+}
+
+SELECT
+  CAST(session_id AS INT64) AS session_id,
+  user_id,
+  CAST(session_start_time AS DATETIME) AS session_start_time,
+  CAST(pageviews AS INT64) AS pageviews,
+  country
+FROM
+  ${ref("raw_ga_sessions")}
