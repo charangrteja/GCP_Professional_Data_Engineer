@@ -1,4 +1,5 @@
 # WEBSITE TRAFFIC ANALYSIS USING DATAFORM
+![flow chart](https://github.com/charangrteja/GCP_Professional_Data_Engineer/blob/main/Dataform/Website%20Traffic%20Analysis/webtraffic_dataform.png)
 ### Prerequisites:
 * A Google Cloud project with Dataform enabled.
 * A BigQuery dataset to store your data.
