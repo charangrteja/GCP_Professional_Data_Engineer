@@ -1,0 +1,16 @@
+config {
+  type: "table",
+  name: "top_pages",
+  description: "Top visited pages."
+}
+
+SELECT
+  page_url,
+  COUNT(DISTINCT session_id) AS total_sessions
+FROM
+  ${ref("stg_ga_pageviews")}
+GROUP BY
+  page_url
+ORDER BY
+  total_sessions DESC
+LIMIT 10  -- Limit to the top 10 pages
