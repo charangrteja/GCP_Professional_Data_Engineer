@@ -1,0 +1,6 @@
+config {
+  type: "assertion",
+  name: "stg_ga_sessions_positive_pageviews"
+}
+
+SELECT * FROM ${ref("stg_ga_sessions")} WHERE pageviews < 0
