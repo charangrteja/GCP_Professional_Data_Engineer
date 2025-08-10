@@ -1,0 +1,11 @@
+config {
+  type: "table",
+  name: "stg_ga_pageviews",
+  description: "Staged Google Analytics pageview data."
+}
+
+SELECT
+  CAST(session_id AS INT64) AS session_id,
+  page_url
+FROM
+  ${ref("raw_ga_pageviews")}  -- Replace with your GA4 table if applicable
