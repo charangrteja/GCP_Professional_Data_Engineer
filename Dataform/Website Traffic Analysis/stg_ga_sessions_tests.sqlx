@@ -1,0 +1,6 @@
+config {
+  type: "assertion",
+  name: "stg_ga_sessions_no_null_country"
+}
+
+SELECT * FROM ${ref("stg_ga_sessions")} WHERE country IS NULL
